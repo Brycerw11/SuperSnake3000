@@ -1,0 +1,27 @@
+/* Default styling used for all pages on the site */
+/* Imported into individual stylesheets, not directly linked to page*/
+
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    margin: 0;
+}
+body.dark-mode{
+    background-color: #0f172a; /* Close to TailwindCSS v4.0's slate-900 color*/
+}
+body.dark-mode *{
+    color: #FFFFFF;
+}
+
+#theme-switch-button{
+    color: black;
+
+    border-radius: 16px;
+    padding: 0.5rem;
+}
+#theme-switch-button img{
+    width: 1rem;
+    height: 1rem;
+}
