@@ -6,3 +6,27 @@
 
     margin: 1.5rem 0;
 }
+
+#gamemode-buttons{
+    display: flex;
+    justify-content: center;
+}
+#gamemode-buttons button{
+    color: black;
+    background-color: lightgray;
+
+    width: 12rem;
+    height: 4rem;
+    border-radius: 15px;
+    margin: 3rem;
+}
+#freeplay-button{
+    text-align: center;
+    
+    color: black;
+    background-color: lightgray;
+
+    width: 12rem;
+    height: 4rem;
+    border-radius: 15px;
+}

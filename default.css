@@ -36,3 +36,8 @@ body.dark-mode *{
     transition-duration: 0.5s;
     transition-property: color, background-color;
 }
+
+.centering-div{
+    display: flex;
+    justify-content: center;
+}
