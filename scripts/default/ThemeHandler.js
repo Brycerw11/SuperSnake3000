@@ -9,6 +9,7 @@ $(function (){
     darkModeIconSrc = "https://cdn-icons-png.freepik.com/512/6714/6714978.png"
     lightModeIconSrc = "https://www.svgrepo.com/show/432507/light-mode.svg"
 
+    //preload Icons
     var deviceIconPreload = new Image()
     deviceIconPreload.src = devicePrefIconSrc
     var darkIconPreload = new Image()
@@ -56,16 +57,13 @@ $(function (){
                 UpdateSiteTheme();
                 break;
         }
+        UpdateStoredThemeChoice();
     })
 
-    var transitionTimeoutID;
-    function UpdateSiteTheme(initialLoad = false){
-        console.log("Updating Site Theme")
-
-        //update switch theme icon
-        devicePrefIconSrc = "./assets/icons/DevicePreferenceIcon.svg"
-        darkModeIconSrc = "https://cdn-icons-png.freepik.com/512/6714/6714978.png"
-        lightModeIconSrc = "https://www.svgrepo.com/show/432507/light-mode.svg"
+    devicePrefIconSrc = "./assets/icons/DevicePreferenceIcon.svg";
+    darkModeIconSrc = "https://cdn-icons-png.freepik.com/512/6714/6714978.png";
+    lightModeIconSrc = "https://www.svgrepo.com/show/432507/light-mode.svg";
+    function UpdateThemeSwitcherIcon(){
         switch(themeChoice){
             case "light":
                 $("#theme-switch-button img").attr("src", lightModeIconSrc)
@@ -80,7 +78,15 @@ $(function (){
                 $("#theme-switch-button img").attr("alt", "Device Theme Preference Icon")
                 break;
         }
+    }
 
+    UpdateThemeSwitcherIcon(); //update switcher icon on inital load
+
+    var transitionTimeoutID;
+    function UpdateSiteTheme(initialLoad = false){
+        console.log("Updating Site Theme")
+
+        UpdateThemeSwitcherIcon();
 
         //set color transitions when changing theme
         if (!initialLoad){
