@@ -36,7 +36,7 @@ $(function (){
             var currentData = element.split(", "); //current data will be an array set up like: [playerName, playerScore]
     
             let playerNameLabel = `<div>${position}. <span class="player-name">${currentData[0]}</span></div>`
-            let scoreLabel = `<div>${currentData[1]}</div>`
+            let scoreLabel = `<div>${currentData[1]}s</div>`
             $("#easy-leaderboard .leaderboard-values").append(`<li> ${playerNameLabel} ${scoreLabel} </li>`)
     
             position++;
@@ -52,7 +52,7 @@ $(function (){
             var currentData = element.split(", "); //current data will be an array set up like: [playerName, playerScore]
     
             let playerNameLabel = `<div>${position}. <span class="player-name">${currentData[0]}</span></div>`
-            let scoreLabel = `<div>${currentData[1]}</div>`
+            let scoreLabel = `<div>${currentData[1]}s</div>`
             $("#medium-leaderboard .leaderboard-values").append(`<li> ${playerNameLabel} ${scoreLabel} </li>`)
     
             position++;
@@ -68,7 +68,7 @@ $(function (){
             var currentData = element.split(", "); //current data will be an array set up like: [playerName, playerScore]
     
             let playerNameLabel = `<div>${position}. <span class="player-name">${currentData[0]}</span></div>`
-            let scoreLabel = `<div>${currentData[1]}</div>`
+            let scoreLabel = `<div>${currentData[1]}s</div>`
             $("#hard-leaderboard .leaderboard-values").append(`<li> ${playerNameLabel} ${scoreLabel} </li>`)
     
             position++;

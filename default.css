@@ -27,6 +27,11 @@ body.dark-mode > *{
     height: 4rem;
     padding: 0.5rem;
     border-radius: 16px;
+
+    transition: background-color 0.5s;
+}
+#theme-switch-button:hover{
+    background-color: #bdbdbd;
 }
 #theme-switch-button img{
     width: 100%;
