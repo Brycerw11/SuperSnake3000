@@ -34,7 +34,7 @@ body.dark-mode > *{
 }
 .theme-transition{
     transition-duration: 0.5s;
-    transition-property: color, background-color;
+    transition-property: color, background-color, border-color;
 }
 
 .centering-div{

@@ -71,11 +71,19 @@ body{
 .dark-mode .leaderboard .leaderboard-title{border-color: white;}
 .leaderboard-values{
     margin: 0;
-    padding: 0;
+    padding: 0.35rem;
 }
 .leaderboard-values > li{
+    color: black;
     display: flex;
     justify-content: space-between;
+
+    margin: 0.5rem 0;
+}
+.leaderboard *{color: black;}
+.dark-mode .leaderboard *{color: white;}
+.player-name{
+    margin-left: 0.2rem;
 }
 .leaderboard > .leaderboard-values > p{
     text-align: center;
