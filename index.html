@@ -18,13 +18,37 @@
     <h1 id="game-title">Super Snake 3000</h1>
 
     <div id="gamemode-buttons">
-        <button id="survival-mode-button">Play Survival Mode</button>
-        <button id="battle-mode-button">Play Battle Mode</button>
+        <button id="survival-mode-button" class="main-menu-button">Play Survival Mode</button>
+        <button id="battle-mode-button" class="main-menu-button">Play Battle Mode</button>
     </div>
-    <div class="centering-div">
-        <button id="freeplay-button">Freeplay</button>
+    <div id="freeplay-button-container" class="centering-div">
+        <button id="freeplay-button" class="main-menu-button">Freeplay</button>
+    </div>
+
+    <h2 id="leaderboard-section-title">Survival Mode Leaderboards</h2>
+    <div id="leaderboard-section-container">
+        <div id="easy-leaderboard" class="leaderboard">
+            <h4 class="leaderboard-title">Easy</h4>
+            <ol class="leaderboard-values">
+                <p>There are no entries in the leaderboard</p>
+            </ol>
+        </div>
+        <div id="medium-leaderboard" class="leaderboard">
+            <h4 class="leaderboard-title">Medium</h4>
+            <ol class="leaderboard-values">
+                <p>There are no entries in the leaderboard</p>
+            </ol>
+        </div>
+        <div id="hard-leaderboard" class="leaderboard">
+            <h4 class="leaderboard-title">Hard</h4>
+            <ol class="leaderboard-values">
+                <p>There are no entries in the leaderboard</p>
+            </ol>
+        </div>
     </div>
 
     <script src="./scripts/default/ThemeHandler.js"></script>
+    <script src="./scripts/mainmenu/LeaderboardHandler.js"></script>
+    <script src="./scripts/mainmenu/MenuEasterEggs.js"></script>
 </body>
 </html>

@@ -1,32 +1,99 @@
 @import url("../default.css");
 
+body{
+    overflow-x: hidden;
+}
+
 #game-title{
     font-size: 4rem;
     text-align: center;
 
-    margin: 1.5rem 0;
+    margin: 2rem 0;
 }
 
+/* CSS for the menu buttons */
 #gamemode-buttons{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 #gamemode-buttons button{
-    color: black;
-    background-color: lightgray;
-
-    width: 12rem;
-    height: 4rem;
-    border-radius: 15px;
-    margin: 3rem;
+    margin: 0.5rem;
+}
+#freeplay-button-container{
+    margin-top: 0.75rem;
 }
 #freeplay-button{
-    text-align: center;
-    
+    font-size: 1.3rem;
+}
+.main-menu-button{
     color: black;
     background-color: lightgray;
+    transition: 0.25s background-color;
+
+    font-size: 1.1rem;
+    font-weight: 500;
 
     width: 12rem;
     height: 4rem;
+    border: 3px solid black;
     border-radius: 15px;
+}
+.main-menu-button:hover{
+    background-color: #999999;
+}
+.dark-mode .main-menu-button{
+    border-color: white;
+}
+
+/* CSS for leaderboards */
+#leaderboard-section-title{
+    text-align: center;
+    margin-top: 2rem;
+}
+#leaderboard-section-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+.leaderboard{
+    min-width: 18rem;
+    padding: 0.5rem;
+    border: 4px solid black;
+    border-radius: 1rem;
+}
+.dark-mode .leaderboard { border-color: white; }
+.leaderboard .leaderboard-title{
+    text-align: center;
+    margin: 0;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px dashed black;
+}
+.dark-mode .leaderboard .leaderboard-title{border-color: white;}
+.leaderboard-values{
+    margin: 0;
+    padding: 0;
+}
+.leaderboard-values > li{
+    display: flex;
+    justify-content: space-between;
+}
+.leaderboard > .leaderboard-values > p{
+    text-align: center;
+}
+
+
+/* CSS for main menu's snake easter egg */
+#menu-snake{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    z-index: -1;
+}
+.snake-part{    
+    width: 0.9rem;
+    height: 0.9rem;
+    margin: 0.1rem;
+
+    background-color: #1ebd19;
 }
