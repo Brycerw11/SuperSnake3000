@@ -26,7 +26,6 @@ $(function (){
     //The local storage data structure for the Leaderboards:
     // "firstPlacesName, firstPlaceScore | secondPlacesName, secondPlaceScore | ... and so on "
 
-
     //Add easy leaderboard's values
     var position = 1;
     if (easyLeaderboardValue != null){
@@ -62,7 +61,7 @@ $(function (){
     //add hard leaderboard's values
     position = 1;
     if (hardLeaderboardValue != null){
-        $("#hard-leaderboard .leaderboard-values").html("") //clear out current values / placeholder
+        $("#hard-leaderboard .leaderboard-values").html("") //clear out current values or placeholder
 
         hardLeaderboardValue.split(" | ").forEach((element) => {
             var currentData = element.split(", "); //current data will be an array set up like: [playerName, playerScore]
@@ -75,6 +74,16 @@ $(function (){
         });
     }
 
+    $(".leaderboard-title").on("dblclick", function(){
+
+        //confirm they want to reset the leaderboard by making them type "reset"
+        if ( prompt(`Type "reset" to confirm resetting the leaderboard`).toLowerCase() == "reset"){
+
+            $(this).parent().find(".leaderboard-values").html(`<p>There are no entries in this leaderboard</p>`)
+            let targetLeaderboard = $(this).text()
+            localStorage.removeItem("SuperSnake3000" + targetLeaderboard + "Leaderboard") //clear leaderboard in local storage
+        }
+    })
 
     function createTestLeaderboardData(){
         localStorage.setItem("SuperSnake3000EasyLeaderboard", `Player Name 1, 20.3 | Player Name 2, 25.3`)
