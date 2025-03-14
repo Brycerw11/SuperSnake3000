@@ -46,6 +46,10 @@ body.dark-mode > *{
     display: flex;
     justify-content: center;
 }
+.spliting-div{
+    display: flex;
+    justify-content: space-between;
+}
 .hidden{
     display: none;
 }
