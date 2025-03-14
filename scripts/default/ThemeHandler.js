@@ -3,15 +3,15 @@
 // Run code when document is loaded using jQuery
 $(function (){
 
-    //preload theme icons
-
-    devicePrefIconSrc = "./assets/icons/DevicePreferenceIcon.svg"
-    darkModeIconSrc = "https://cdn-icons-png.freepik.com/512/6714/6714978.png"
-    lightModeIconSrc = "https://www.svgrepo.com/show/432507/light-mode.svg"
+    // store theme icons' image url
+    devicePrefIconSrc = "https://res.cloudinary.com/dtxrpihy6/image/upload/f_auto,q_auto/v1/SuperSnake3000Assets/t4fjiv6dainb9syzhgpk"
+    darkModeIconSrc = "https://cdn-icons-png.freepik.com/512/6714/6714978.png" //temp icon
+    lightModeIconSrc = "https://www.svgrepo.com/show/432507/light-mode.svg" //temp icon
 
     //preload Icons
     var deviceIconPreload = new Image()
     deviceIconPreload.src = devicePrefIconSrc
+
     var darkIconPreload = new Image()
     darkIconPreload.src = darkModeIconSrc
     var lightIconPreload = new Image()
@@ -38,7 +38,7 @@ $(function (){
     }
 
     //Add theme switch button
-    imgHTML = `<img src="./assets/icons/DevicePreferenceIcon.svg" alt="Device Theme Preference Icon">`
+    imgHTML = `<img src="${devicePrefIconSrc}" alt="Device Theme Preference Icon">`
     buttonHTML = `<button id="theme-switch-button" title="Switch Color Theme"> ${imgHTML} </button>`
     $("body").append(buttonHTML)
 
@@ -60,9 +60,6 @@ $(function (){
         UpdateStoredThemeChoice();
     })
 
-    devicePrefIconSrc = "./assets/icons/DevicePreferenceIcon.svg";
-    darkModeIconSrc = "https://cdn-icons-png.freepik.com/512/6714/6714978.png";
-    lightModeIconSrc = "https://www.svgrepo.com/show/432507/light-mode.svg";
     function UpdateThemeSwitcherIcon(){
         switch(themeChoice){
             case "light":
@@ -84,7 +81,6 @@ $(function (){
 
     var transitionTimeoutID;
     function UpdateSiteTheme(initialLoad = false){
-        console.log("Updating Site Theme")
 
         UpdateThemeSwitcherIcon();
 
