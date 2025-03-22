@@ -53,3 +53,7 @@ body.dark-mode > *{
 .hidden{
     display: none;
 }
+.bold-line{
+    font-weight: 600;
+    text-decoration: underline;
+}

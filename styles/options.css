@@ -20,15 +20,15 @@ hr{
     text-align: center;
     margin: 1rem 0 0.5rem 0;
 }
-#gamemode-explaination{
+#gamemode-explaination, #how-to-play-text{
     text-indent: 2em;
     text-align: justify;
     width: 50vw;
     margin: auto;
 }
 
-#options .centering-div{margin-top: 2rem; flex-wrap: wrap;}
-.options-section-header{
+#options .centering-div{margin-top: 1.25rem; flex-wrap: wrap;}
+h3{ /* .options-section-header and the how to play header */
     text-align: center;
     margin: 2rem 0 0.75rem 0;
 }
@@ -45,3 +45,49 @@ hr{
 }
 .options * {color: black;}
 .dark-mode .options * {color: white;}
+
+
+/* CSS for survival mode's options */
+#current-difficulty-header{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#current-difficulty-effects{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#current-difficulty-effects li{
+    display: flex;
+    justify-content: space-between;
+
+    min-width: 20rem;
+    margin: 0.25rem;
+}
+
+
+button{
+    color: black;
+    background-color: lightgray;
+    transition: 0.25s background-color;
+
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    width: 12rem;
+    height: 3.5rem;
+    border: 3px solid black;
+    border-radius: 15px;
+    margin: 0.25rem;
+}
+button:hover{
+    background-color: #999999;
+}
+.dark-mode button{
+    border-color: white;
+}
+
+#play-button{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
