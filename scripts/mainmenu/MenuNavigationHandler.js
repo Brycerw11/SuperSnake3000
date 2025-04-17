@@ -6,7 +6,8 @@ $(function (){
 
     $("#survival-mode-button").on("click", function(){
         localStorage.setItem("SuperSnake3000-Settings-Gamemode", "survival")
-        window.location.href = "pages/options.html";
+        // window.location.href = "pages/options.html";
+        window.location.href = "pages/game.html";
     })
 
 })
