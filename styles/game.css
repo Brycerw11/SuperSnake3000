@@ -13,16 +13,23 @@
     font-weight: 500;
 }
 
+#score-section{
+    width: 65vw;
+    margin: 2.5rem auto 0 auto;
+}
+
+#score-section > h3{
+    margin: 0.25rem 0;
+}
+
 #game-grid{
     width: 65vw;
+    background-color: black;
 
-    border: 3px solid black;
+    border: 3px solid white;
     border-radius: 15px;
 
-    margin: 2.5rem auto 0 auto;
+    margin: auto;
 
     overflow: hidden;
-}
-.dark-mode #game-grid{
-    border-color: white;
 }
